@@ -13,6 +13,12 @@ sudo docker run -it -v /home/dimon/openposedata/:/openpose/data/ --net=host -e D
 
 We need to `-v /home/dimon/openposedata/:/openpose/data/` if we want processing any media from filesystem.
 
+Processing images:
+```bash
+ ./build/examples/openpose/openpose.bin --image_dir ./data --display 0 --write_json ./data/result --write_images ./data/result --face --hand
+
+```
+
 Supports - 
 1. CUDA 10
 2. CUDnn 7
