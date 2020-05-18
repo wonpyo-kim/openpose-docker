@@ -23,3 +23,24 @@ Supports -
 1. CUDA 10
 2. CUDnn 7
 3. Python 3 (will be 3.7 soon)
+
+Here is the steps, to download COCO model, and save docker image ([how-to-commit-changes-to-docker-image](https://phoenixnap.com/kb/how-to-commit-changes-to-docker-image)):
+* run container: `docker run -it --runtime=nvidia exsidius/openpose`
+* install wget: `apt-get install wget`
+* go to folder, and download COCO-model:
+```
+cd models/pose/coco/
+wget https://github.com/foss-for-synopsys-dwc-arc-processors/synopsys-caffe-models/raw/master/caffe_models/openpose/caffe_model/pose_iter_440000.caffemodel
+```
+* Как только вы закончите модифицировать новый контейнер, выйдите из него:
+`exit`
+Предложите системе отобразить список запущенных контейнеров :
+`sudo docker ps -a`
+Вам потребуется **идентификатор КОНТЕЙНЕРА**, чтобы сохранить изменения, внесенные в существующее изображение. Скопируйте значение идентификатора из вывода.
+* Наконец, создайте новое изображение, зафиксировав изменения, используя следующий синтаксис:
+`sudo docker commit [CONTAINER_ID] [new_image_name]`
+Поэтому в нашем примере это будет:
+`sudo docker commit c0d4c6800b5d openpose`
+Где *c0d4c6800b5d* находится **идентификатор КОНТЕЙНЕРА** и **openpose** имя нового Image.
+* Ваше вновь созданное изображение теперь должно быть доступно в списке локальных изображений. Вы можете проверить, проверив список изображений снова:
+`sudo docker images`
