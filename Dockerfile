@@ -34,6 +34,7 @@ RUN echo "Installing dependencies..." && \
 RUN echo "Downloading and building OpenPose..." && \
 	git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose.git && \
 	mkdir -p /openpose/build && \
+	wget -P /openpose/models/pose/coco/ https://github.com/foss-for-synopsys-dwc-arc-processors/synopsys-caffe-models/raw/master/caffe_models/openpose/caffe_model/pose_iter_440000.caffemodel && \
 	cd /openpose/build && \
 	cmake .. && \
 	make -j`nproc`
