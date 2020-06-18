@@ -27,6 +27,10 @@ Supports -
 2. CUDnn 7
 3. Python 3 (will be 3.7 soon)
 
+To use docker without sudo [Link](https://github.com/sindresorhus/guides/blob/master/docker-without-sudo.md)
+
+
+
 Here is the steps, to download COCO model, and save docker image ([how-to-commit-changes-to-docker-image](https://phoenixnap.com/kb/how-to-commit-changes-to-docker-image)):
 * run container: `docker run -it --runtime=nvidia exsidius/openpose`
 * install wget: `apt-get install wget`
