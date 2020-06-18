@@ -1,4 +1,5 @@
-Do not use docker-file from git!
+Docker-file from this repository is broken!
+Please use instructions below.
 
 # openpose-docker
 Dockerfile to build the excellent OpenPose software from CMU.
