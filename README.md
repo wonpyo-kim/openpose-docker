@@ -8,7 +8,7 @@ At first, use this guides to install `nvidia-docker`:
 1. [Install nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#ubuntu-160418042004-debian-jessiestretchbuster)
 2. [Install nvidia-docker 2.0](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
 
-Get an image:
+Then get an image:
 ```
 git pull exsidius/openpose
 ```
